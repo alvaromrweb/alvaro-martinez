@@ -1,41 +1,34 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import astronautImage from "~/assets/astronaut.png";
-import HeroImage from "~/components/hero-image.astro";
-import Starfield from "~/components/starfield.astro";
-import GitHubCorner from "./github-corner.astro";
+import fotoCara from "~/assets/foto-cara.png";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
-  <GitHubCorner />
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
-  </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
-    <h2
+
+  
+  <div class="relative grid h-full place-items-center sm:grid-cols-2 bg-gradient-to-r from-slate-900 to-blue-900 brightness-80">
+    <div
       class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
-      >
-        Build fast
-        <br /> websites,
-        <br /> faster.
-      </div>
-    </h2>
+      <h2 class="text-8xl font-extrabold tracking-tighter text-center">
+        Álvaro Martínez
+      </h2>
+      <h4 class="gradient-text text-center 2xl:text-left font-extrabold tracking-tighter text-4xl">
+        Full Stack Web Developer
+      </h4>
+      <p class="text-center 2xl:text-left  text-gray-200/75 text-sm">
+         +7 años de experiencia en desarrollo y mantenimiento de aplicaciones web
+      </p>
+    </div>
     <div
-      id="astronaut"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <Picture
         class="object-cover w-full h-full"
-        src={astronautImage}
+        src={fotoCara}
         widths={widths}
         sizes={sizes}
         loading="eager"
