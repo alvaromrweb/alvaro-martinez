@@ -22,6 +22,11 @@ module.exports = {
       borderColor: {
         default: "var(--color-border)",
       },
+      keyframes: {
+        moveInfiniteRight: {
+          "100%": { transform: "translateX(-100%)" },
+        }
+      }
     },
   },
   corePlugins: {
