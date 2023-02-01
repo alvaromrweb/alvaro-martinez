@@ -4,6 +4,11 @@ export interface CompatibilityItem {
   url: string;
 }
 
+export interface TechnologyItem {
+  icon: string;
+  title: string;
+}
+
 export interface FeatureItem {
   description: string;
   icon: string;
