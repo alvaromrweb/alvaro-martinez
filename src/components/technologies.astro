@@ -1,0 +1,66 @@
+---
+import { Icon } from "astro-icon";
+import type { TechnologyItem } from "~/types";
+
+const technologies: Array<TechnologyItem> = [
+  {
+    title: "React",
+    icon: "logos:react",
+  },
+  {
+    title: "NextJS",
+    icon: "logos:nextjs-icon",
+  },
+  {
+    title: "TailwindCSS",
+    icon: "logos:tailwindcss-icon",
+  },
+  {
+    title: "JavaScript",
+    icon: "logos:javascript",
+  },
+  {
+    title: "PHP",
+    icon: "logos:php",
+  },
+  {
+    title: "CSS",
+    icon: "logos:css-3",
+  },
+  {
+    title: "MySQL",
+    icon: "logos:mysql",
+  },
+  {
+    title: "Bootstrap",
+    icon: "logos:bootstrap",
+  },
+  {
+    title: "Wordpress",
+    icon: "logos:wordpress-icon",
+  },
+  {
+    title: "Prestashop",
+    icon: "logos:prestashop",
+  },
+  {
+    title: "Git",
+    icon: "mdi:git",
+  },
+  
+];
+---
+
+<div class="absolute bottom-0 z-20 flex w-full items-center  border-b border-transparent px-8 py-4 text-white">
+    <ul class="flex items-center justify-between gap-4 w-full moveInfinteRight">
+    {
+        technologies.map((item) => (
+            <li>
+                <div class="flex flex-col items-center gap-2">
+                    <Icon class="h-12" name={item.icon} />
+                </div>
+            </li>
+        ))
+    }
+    </ul>
+</div>
