@@ -13,11 +13,16 @@ const links: Array<FooterLink> = [
     description: "Linkedin profile",
     icon: "fa-brands:linkedin-in",
   },
+  {
+    url: "mailto:alvaromrweb@gmail.com",
+    description: "Email contact",
+    icon: "ic:outline-email",
+  },
 ];
 ---
 
 <footer class="relative flex h-32 items-center justify-center bg-slate-800">
-  <ul class="relative grid grid-cols-2 gap-4 ">
+  <ul class="relative grid grid-cols-3 gap-4 ">
     {
       links.map((link) => (
         <li>
