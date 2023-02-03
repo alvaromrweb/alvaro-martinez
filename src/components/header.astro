@@ -4,15 +4,16 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Experiencia", url: "#features" },
-  { title: "Tecnologías", url: "#compatibility" },
-  { title: "Proyectos", url: "#showcase" },
+  { title: "Sobre mi", url: "#aboutMe" },
+  { title: "Experiencia", url: "#experiencia" },
+  { title: "Tecnologías", url: "#tecnologias" },
+  { title: "Proyectos", url: "#proyectos" },
 ];
 ---
 
 <header
   id="page-header"
-  class="fixed-header z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white opacity-75"
+  class="fixed-header z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-3 md:py-4 text-white bg-gray-900/75 backdrop-blur-md"
 >
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <Icon name="logomark" class="h-10" />
@@ -40,7 +41,7 @@ const navItems: Array<NavItem> = [
       >
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
-      <ThemeSwitcher />
+      <!-- <ThemeSwitcher /> -->
     </div>
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
       <div class="fixed inset-0 bg-default px-8 py-4 text-default">
@@ -122,7 +123,7 @@ const navItems: Array<NavItem> = [
 <style>
   .fixed-header {
     @apply fixed top-0 bottom-auto;
-    @apply border-default bg-default text-default;
+    @apply border-default  text-default;
   }
   .modal.is-open {
     @apply block;

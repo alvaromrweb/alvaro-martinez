@@ -1,0 +1,81 @@
+---
+import { Icon } from "astro-icon";
+import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
+
+const features: Array<FeatureItem> = [
+  {
+    title: "Bring Your Own Framework",
+    description:
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    icon: "mdi:handshake",
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    icon: "mdi:feather",
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
+    icon: "mdi:directions-fork",
+  },
+  {
+    title: "Broad Integration",
+    description:
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
+    icon: "mdi:graph",
+  },
+  {
+    title: "SEO Enabled",
+    description:
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
+    icon: "mdi:search-web",
+  },
+  {
+    title: "Community",
+    description:
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    icon: "mdi:account-group",
+  },
+];
+---
+
+<ContentSection title="Experiencia" id="experiencia">
+  <Fragment slot="lead">
+    A lo largo de mi <span class="text-primary">carrera</span>
+    he tenido estas <span class="text-primary">experiencias</span> laborales.
+  </Fragment>
+  
+  
+  <ol class="relative max-w-6xl">                  
+    <li class="mb-10 ml-6">            
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 top-1 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+            <svg aria-hidden="true" class="w-3 h-3 text-blue-300" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-sm  text-gray-900 dark:text-white">
+          <span class="text-primary text-lg font-bold mr-2 contents">Desarrollador web</span>
+           en Azken Services S.L.
+        </h3>
+        <time class="block mb-2 text-sm font-normal leading-none text-gray-400">2015 - 2022</time>
+        <ul class="list-disc ml-4 marker:text-blue-400 space-y-2">
+          <li>Planificación, investigación, desarrollo, testeo y mantenimiento de aplicaciones web hechas con PHP, JavaScript, JQuery y MySQL. </li>
+          <li>Desarrollo de una plataforma ecommerce hecha a medida desde cero usando PHP, JavaScript, JQuery y MySQL.</li>
+          <li>Desarrollo de un CRM hecho a medida desde cero con PHP, JavaScript, JQuery y MySQL para gestionar llamadas a clientes.</li>
+          <li>Desarrollo de scripts para web scraping.</li>
+          <li>Desarrollo de aplicaciones front que se comuniquen con una API externa para llevar a cabo las acciones de backend.</li>
+          <li>Aplicar soluciones de seguridad a Pentesting.</li>
+          <li>Mantenimiento de aplicaciones con AngularJS y Firebase.</li>
+          <li>Desarrollo y mantenimiento de páginas web hechas con Wordpress y Prestashop.</li>
+          <li>Desarrollo y mantenimiento de plugins para Wordpress y módulos para Prestashop.</li>
+          <li>Maquetación web con Bootstrap, HTML5 y CSS3.</li>
+          <li>Experiencia con trabajo en equipo.</li>
+          <li>Experiencia en interpretar requisitos del cliente y llevar a cabo arquitectura y funcionamiento de la aplicación según estos.</li>
+        </ul>
+    </li>
+    
+  </ol>
+
+</ContentSection>
