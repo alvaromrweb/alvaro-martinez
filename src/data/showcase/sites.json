@@ -1,26 +1,38 @@
 [
   {
     "title": "Metropoliscenter",
-    "image": "./images/metropolis.png"
+    "image": "./images/metropolis.png",
+    "description": "Ecommerce hecho a medida desde 0 con casuística especial para cartas y sus atributos + panel de administración y TPV",
+    "techIcons": ["logos:php", "logos:javascript", "logos:bootstrap", "logos:mysql"]
   },
   {
     "title": "MYIQOS",
-    "image": "./images/iqos.png"
+    "image": "./images/iqos.png",
+    "description": "Aplicación frontend que se comunica con una API exterior para mostrar y modificar datos, incluyendo una tienda, perfil, integración con Instagram y demás",
+    "techIcons": ["logos:php", "logos:javascript", "logos:bootstrap"]
   },
   {
     "title": "CRM GO2DO",
-    "image": "./images/crmgo2do.png"
+    "image": "./images/crmgo2do.png",
+    "description": "CRM de gestión de clientes, empresas, llamadas y campañas hecho a medida desde 0",
+    "techIcons": ["logos:php", "logos:javascript", "logos:bootstrap", "logos:mysql"]
   },
   {
     "title": "Arsmagazine",
-    "image": "./images/arsmagazine.png"
+    "image": "./images/arsmagazine.png",
+    "description": "Wordpress de arte",
+    "techIcons": ["logos:wordpress-icon", "logos:php", "logos:javascript"]
   },
   {
     "title": "Servixtt",
-    "image": "./images/servixtt.png"
+    "image": "./images/servixtt.png",
+    "description": "Prestashop con módulos hechos a medida para sincronizar stock con su almacén y hacer disponible su stock a otros clientes selectivamente mediante una API",
+    "techIcons": ["logos:prestashop", "logos:php", "logos:javascript",  "logos:mysql"]
   },
   {
     "title": "Miequipaciónvirtual",
-    "image": "./images/miequipacionvirtual.png"
+    "image": "./images/miequipacionvirtual.png",
+    "description": "Prestashop multitienda con un módulo hecho a medida para que cada tienda tenga su login y según el login te deje entrar a una u otra",
+    "techIcons": ["logos:prestashop", "logos:php", "logos:javascript", "logos:mysql"]
   }
 ]
