@@ -2,76 +2,116 @@
 import { Icon } from "astro-icon";
 import type { TechnologyItem } from "~/types";
 import ContentSection from "./content-section.astro";
+import TechnologiesList from "./technologies-list.astro";
 
-const technologies: Array<TechnologyItem> = [
+const mainTechs: Array<TechnologyItem> = [
   {
-    title: "React",
-    icon: "logos:react",
-  },
-  {
-    title: "NextJS",
-    icon: "logos:nextjs-icon",
-  },
-  {
-    title: "TailwindCSS",
-    icon: "logos:tailwindcss-icon",
+    title: "PHP",
+    icon: "technologies/php",
   },
   {
     title: "JavaScript",
     icon: "logos:javascript",
   },
   {
-    title: "PHP",
-    icon: "logos:php",
-  },
-  {
-    title: "HTML",
-    icon: "logos:html-5",
-  },
-  {
-    title: "CSS",
-    icon: "logos:css-3",
-  },
-  {
     title: "MySQL",
     icon: "logos:mysql",
+  },
+  {
+    title: "React",
+    icon: "logos:react",
+  },
+  {
+    title: "TailwindCSS",
+    icon: "logos:tailwindcss-icon",
   },
   {
     title: "Bootstrap",
     icon: "logos:bootstrap",
   },
   {
+    title: "Git",
+    icon: "mdi:git",
+  },
+  {
+    title: "jQuery",
+    icon: "mdi:jquery",
+  },
+  {
+    title: "HTML5",
+    icon: "vscode-icons:file-type-html",
+  },
+  {
+    title: "CSS3",
+    icon: "vscode-icons:file-type-css",
+  },
+  {
     title: "Wordpress",
-    icon: "logos:wordpress-icon",
+    icon: "bi:wordpress",
   },
   {
     title: "Prestashop",
     icon: "logos:prestashop",
   },
-  {
-    title: "Git",
-    icon: "mdi:git",
-  },
   
+  
+];
+
+const secondaryTechs: Array<TechnologyItem> = [
+  
+  {
+    title: "NextJS",
+    icon: "file-icons:nextjs",
+  },
+  {
+    title: "Astro",
+    icon: "vscode-icons:file-type-astro",
+  },
+  {
+    title: "NodeJS",
+    icon: "logos:nodejs-icon",
+  },
+  {
+    title: "ExpressJS",
+    icon: "technologies/express",
+  },
+  {
+    title: "MongoDB",
+    icon: "technologies/mongodb",
+  },
+  {
+    title: "Firebase",
+    icon: "logos:firebase",
+  },
 ];
 ---
 
 <ContentSection title="Tecnologías" id="tecnologias">
   <Fragment slot="lead">
-    Estas son las tecnologías que he usado trabajando
-    y haciendo proyectos personales
+    Estas son las tecnologías que he usado <span class="text-primary">trabajando</span>
+    y haciendo <span class="text-primary">proyectos personales</span>
   </Fragment>
-  <div class="flex w-full items-center  border-b border-transparent px-8 py-4 text-white">
-      <ul class="flex items-center justify-between gap-4 w-full moveInfinteRight">
+  <TechnologiesList
+    items={mainTechs}
+    title="Más usadas"
+  />
+  <TechnologiesList
+    items={secondaryTechs}
+    title="Menos usadas"
+  />
+  <!-- <div class="flex w-full items-center  border-b border-transparent px-8 py-4 text-white">
+      <ul class="flex  flex-wrap items-center justify-between gap-4 w-full moveInfinteRight">
       {
           technologies.map((item) => (
               <li>
                   <div class="flex flex-col items-center gap-2">
                       <Icon class="h-12" name={item.icon} />
+                      <p>{item.title}</p>
                   </div>
               </li>
           ))
       }
       </ul>
-  </div>
+  </div> -->
 </ContentSection>
+
