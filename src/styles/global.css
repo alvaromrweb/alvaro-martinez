@@ -9,3 +9,10 @@ a,
   @apply bg-clip-text text-transparent;
   @apply bg-gradient-to-br from-indigo-600 via-blue-500 to-blue-200;
 }
+
+[astro-icon="mdi:jquery"] {
+  color: #78cff5;
+}
+[astro-icon="mdi:git"] {
+  color: #e84d31;
+}
