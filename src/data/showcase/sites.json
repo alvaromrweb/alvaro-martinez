@@ -3,25 +3,25 @@
     "title": "Metropoliscenter",
     "image": "./images/metropolis.png",
     "description": "Ecommerce hecho a medida desde 0 con casuística especial para cartas y sus atributos + panel de administración y TPV",
-    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "logos:mysql"]
+    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "MYIQOS",
     "image": "./images/iqos.png",
     "description": "Aplicación frontend que se comunica con una API exterior para mostrar y modificar datos, incluyendo una tienda, perfil, integración con Instagram y demás",
-    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap"]
+    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery"]
   },
   {
     "title": "CRM GO2DO",
     "image": "./images/crmgo2do.png",
     "description": "CRM de gestión de clientes, empresas, llamadas y campañas hecho a medida desde 0",
-    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "logos:mysql"]
+    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
-    "title": "Arsmagazine",
-    "image": "./images/arsmagazine.png",
-    "description": "Wordpress de arte",
-    "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"]
+    "title": "MDA Game",
+    "image": "./images/mda.png",
+    "description": "Aplicación para un evento que consiste en responder a una serie de preguntas por grupos y luego mostrar las respuestas agrupadas en un backoffice",
+    "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "Servixtt",
@@ -30,9 +30,10 @@
     "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript",  "logos:mysql"]
   },
   {
-    "title": "Miequipaciónvirtual",
-    "image": "./images/miequipacionvirtual.png",
-    "description": "Prestashop multitienda con un módulo hecho a medida para que cada tienda tenga su login y según el login te deje entrar a una u otra",
-    "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript", "logos:mysql"]
+    "title": "Bodegas Tradición",
+    "image": "./images/bodegas.png",
+    "description": "Wordpress con un plugin de reservas modificado para que funcione según el cliente quiere",
+    "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"]
   }
+  
 ]
