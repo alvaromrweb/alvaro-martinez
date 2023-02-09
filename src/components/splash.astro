@@ -2,6 +2,7 @@
 import { Picture } from "@astrojs/image/components";
 import fotoCara from "~/assets/foto-cara.png";
 import { Icon } from "astro-icon";
+import ButtonGradient from "./ui/buttonGradient.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -23,6 +24,11 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       <p class="text-center 2xl:text-left  text-gray-200/75 text-sm font-bold">
          +7 años de experiencia en desarrollo y mantenimiento de aplicaciones web
       </p>
+      <div class="mt-4">
+        <a href="#contacto">
+          <ButtonGradient className="text-lg inset-x-0 sm:inset-x-auto">Contacto</ButtonGradient>
+        </a>
+      </div>
     </div>
     <div
       class="w-2/3 max-w-2xl sm:w-10/12 order-1 sm:order-2 sm:self-auto  2xl:justify-self-start"
