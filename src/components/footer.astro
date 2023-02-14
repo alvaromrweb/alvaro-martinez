@@ -7,11 +7,13 @@ const links: Array<FooterLink> = [
     url: "https://github.com/alvaromrweb",
     description: "GitHub profile",
     icon: "fa-brands:github",
+    target: "_blank"
   },
   {
     url: "https://es.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-reina-469a5bb9",
     description: "Linkedin profile",
     icon: "fa-brands:linkedin-in",
+    target: "_blank"
   },
   {
     url: "mailto:alvaromrweb@gmail.com",
@@ -28,7 +30,7 @@ const links: Array<FooterLink> = [
         <li>
           <a
             class="flex h-16 w-16 items-center justify-center rounded-full border-2 border-current p-4"
-            href={link.url}
+            href={link.url} target={link.target}
           >
             <span class="sr-only">{link.description}</span>
             <Icon class="h-full" name={link.icon} />
