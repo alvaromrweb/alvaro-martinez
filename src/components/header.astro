@@ -5,9 +5,10 @@ import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
   { title: "Sobre mi", url: "#aboutMe" },
-  { title: "Experiencia", url: "#experiencia" },
   { title: "Tecnologías", url: "#tecnologias" },
   { title: "Proyectos", url: "#proyectos" },
+  { title: "Experiencia", url: "#experiencia" },
+  { title: "Contacto", url: "#contacto" },
 ];
 ---
 
@@ -23,7 +24,7 @@ const navItems: Array<NavItem> = [
       <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
-            navItems.map(({ title, url }) => (
+            navItems.map(({ title, url, target, icon }) => (
               <li>
                 <a class="text-sm" href={url}>
                   {title}
@@ -31,6 +32,16 @@ const navItems: Array<NavItem> = [
               </li>
             ))
           }
+          <li>
+            <a class="text-sm" href="https://github.com/alvaromrweb">
+              <Icon class="h-5" name="fa-brands:github" />
+            </a>
+          </li>
+          <li>
+            <a class="text-sm" href="https://es.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-reina-469a5bb9">
+              <Icon class="h-5" name="fa-brands:linkedin-in" />
+            </a>
+          </li>
         </ul>
       </nav>
       <button
