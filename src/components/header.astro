@@ -4,11 +4,13 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Sobre mi", url: "#aboutMe" },
+  { title: "Sobre mí", url: "#aboutMe" },
   { title: "Tecnologías", url: "#tecnologias" },
   { title: "Proyectos", url: "#proyectos" },
   { title: "Experiencia", url: "#experiencia" },
   { title: "Contacto", url: "#contacto" },
+  { icon: "fa-brands:github", url: "https://github.com/alvaromrweb", target: "_blank" },
+  { icon: "fa-brands:linkedin-in", url: "https://es.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-reina-469a5bb9", target: "_blank" },
 ];
 ---
 
@@ -26,22 +28,13 @@ const navItems: Array<NavItem> = [
           {
             navItems.map(({ title, url, target, icon }) => (
               <li>
-                <a class="text-sm" href={url}>
-                  {title}
+                <a class="text-sm" href={url} target={target}>
+                  {icon ? (<Icon class="h-5" name={icon} />) : ''}
+                  {title ? title : ''}
                 </a>
               </li>
             ))
           }
-          <li>
-            <a class="text-sm" href="https://github.com/alvaromrweb">
-              <Icon class="h-5" name="fa-brands:github" />
-            </a>
-          </li>
-          <li>
-            <a class="text-sm" href="https://es.linkedin.com/in/%C3%A1lvaro-mart%C3%ADnez-reina-469a5bb9">
-              <Icon class="h-5" name="fa-brands:linkedin-in" />
-            </a>
-          </li>
         </ul>
       </nav>
       <button
@@ -73,10 +66,11 @@ const navItems: Array<NavItem> = [
           <nav>
             <ul class="flex flex-col">
               {
-                navItems.map(({ title, url }) => (
+                navItems.map(({ title, url, target, icon }) => (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
-                      {title}
+                    <a class="block py-4 text-center text-xl" href={url} target={target}>
+                      {icon ? (<Icon class="h-10 mx-auto" name={icon} />) : ''}
+                      {title ? title : ''}
                     </a>
                   </li>
                 ))
