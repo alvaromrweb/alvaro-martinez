@@ -5,7 +5,7 @@ export interface Props {
 
 const {className} = Astro.props
 ---
-<button class={className}>
+<button class={className} id="buttonSend" >
     <div class="svg-wrapper-1">
       <div class="svg-wrapper">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -32,6 +32,10 @@ const {className} = Astro.props
     overflow: hidden;
     transition: all 0.2s;
     }
+    button:disabled {
+      opacity:.5;
+      cursor: not-allowed;
+    }
 
     button span {
     display: block;
@@ -45,21 +49,25 @@ const {className} = Astro.props
     transition: transform 0.3s ease-in-out;
     }
 
-    button:hover .svg-wrapper {
+    button:enabled:hover .svg-wrapper,
+    button.loading .svg-wrapper {
     animation: fly-1 0.6s ease-in-out infinite alternate;
     }
 
-    button:hover svg {
+    button:enabled:hover svg,
+    button.loading svg {
     transform: translateX(1.2em) rotate(45deg) scale(1.1);
     }
 
-    button:hover span {
-    transform: translateX(5em);
+    button:enabled:hover span,
+    button.loading span {
+    transform: translateX(10em);
     }
 
-    button:active {
+    button:enabled:active {
     transform: scale(0.95);
     }
+    
 
     @keyframes fly-1 {
     from {
