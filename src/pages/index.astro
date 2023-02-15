@@ -11,13 +11,13 @@ import Contact from "~/components/contact.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
-const image = new URL("social.png", site);
+const image = new URL("social.jpg", site);
 const description =
   "Programador web full stack con 7 años de experiencia en desarrollo y mantenimiento de aplicaciones web";
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+<html lang="es" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -67,10 +67,10 @@ const description =
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <AboutMe />
-      <Experience />
       <Technologies />
       <Projects />
-      <!-- <Contact /> -->
+      <Experience />
+      <Contact />
     </div>
     <Footer />
   </body>

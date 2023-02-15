@@ -1,26 +1,76 @@
 ---
 import ContentSection from "~/components/content-section.astro";
+import ButtonSend from "./ui/buttonSend.astro";
 ---
 
-<ContentSection title="Contacto" id="contact">
+<ContentSection title="Contacto" id="contacto">
   <Fragment slot="lead">
-    Ponte en contacto conmigo
+    Ponte en contacto conmigo.
   </Fragment>
 
-  <form action="#" class="space-y-8 w-full max-w-screen-md">
+  <form class="space-y-6 md:space-y-8 w-full max-w-screen-md">
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-            <input type="email" id="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@flowbite.com" required>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Tu email</label>
+            <input type="email" id="email" class="shadow-sm   outline-none  text-sm rounded-lg  block w-full px-4 py-3 bg-gray-700  placeholder-gray-400 text-white  shadow-sm-light" placeholder="nombre@empresa.com" required>
         </div>
         <div>
-            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-            <input type="text" id="subject" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="Let us know how we can help you" required>
+            <label for="subject" class="block mb-2 text-sm font-medium  text-gray-300">Asunto</label>
+            <input type="text" id="subject" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg   shadow-sm  bg-gray-700  placeholder-gray-400 text-white shadow-sm-light" placeholder="Dime en qué te puedo ayudar" required>
         </div>
         <div class="sm:col-span-2">
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-            <textarea id="message" rows="6" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+            <label for="message" class="block mb-2 text-sm font-medium  text-gray-300">Tu mensaje</label>
+            <textarea id="message" rows="6" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg shadow-sm    bg-gray-700  placeholder-gray-400 text-white " placeholder="Explícame más en detalle" required></textarea>
         </div>
-        <button type="submit" class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send message</button>
+        <div id="response" class="transition-all">
+            
+        </div>
+        <ButtonSend className="flex justify-center w-full sm:w-auto sm:px-7">Enviar</ButtonSend>
     </form>
   
 </ContentSection>
+
+<script>
+    const form = document.querySelector('form');
+    const responseDiv = document.getElementById('response');
+    const buttonSend = (document.getElementById('buttonSend') as HTMLButtonElement);
+    if(form) {
+        form.addEventListener('submit', async e => {
+            e.preventDefault()
+            responseDiv.innerText = ''
+            responseDiv.classList.remove('error')
+            responseDiv.classList.remove('success')
+            buttonSend.disabled = true
+            buttonSend.classList.add('loading')
+
+            const email = (document.getElementById('email') as HTMLInputElement).value.trim()
+            const subject = (document.getElementById('subject') as HTMLInputElement).value.trim()
+            const message = (document.getElementById('message') as HTMLInputElement).value.trim()
+
+            try {
+                const res = await fetch("/api/sendForm", {
+                    method: 'post',
+                    headers: {'Content-Type':'application/json'},
+                    body: JSON.stringify({email, subject, message}),
+                })
+                const result = await res.json()
+                responseDiv.innerText = result.message
+                responseDiv.classList.add('success')
+
+                form.reset()
+            } catch (error) {
+                console.log(error)
+                responseDiv.innerText = error.message
+                responseDiv.classList.add('error')
+            }
+
+            buttonSend.disabled = false
+            buttonSend.classList.remove('loading')
+
+            setTimeout(() => {
+                responseDiv.innerText = ''
+                responseDiv.classList.remove('error')
+                responseDiv.classList.remove('success')
+            }, 5000);
+        });
+    }
+</script>

@@ -19,11 +19,14 @@ export interface FooterLink {
   description: string;
   icon: string;
   url: string;
+  target?: string;
 }
 
 export interface NavItem {
-  title: string;
+  title?: string;
   url: string;
+  target?: string;
+  icon?: string;
 }
 
 export interface ShowcaseSite {
