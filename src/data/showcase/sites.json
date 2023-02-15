@@ -1,7 +1,7 @@
 [
   {
     "title": "Metropoliscenter",
-    "image": "./images/metropolis.png",
+    "image": "./images/metropolis.jpg",
     "description": "Ecommerce hecho a medida desde 0 con casuística especial para cartas y sus atributos + panel de administración y TPV",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
@@ -25,13 +25,13 @@
   },
   {
     "title": "Servixtt",
-    "image": "./images/servixtt.png",
+    "image": "./images/servixtt.jpg",
     "description": "Prestashop con módulos hechos a medida para sincronizar stock con su almacén y hacer disponible su stock a otros clientes selectivamente mediante una API",
     "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript",  "logos:mysql"]
   },
   {
     "title": "Bodegas Tradición",
-    "image": "./images/bodegas.png",
+    "image": "./images/bodegas.jpg",
     "description": "Wordpress con un plugin de reservas modificado para que funcione según el cliente quiere",
     "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"]
   }
