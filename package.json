@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.15.0",
+    "@astrojs/netlify": "^2.1.2",
     "@fontsource/inter": "^4.5.15",
     "micromodal": "^0.4.10",
     "nodemailer": "^6.9.1",
