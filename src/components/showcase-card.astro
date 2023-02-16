@@ -1,5 +1,5 @@
 ---
-import { Picture } from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 import type { ShowcaseSite } from "~/types";
 import { Icon } from "astro-icon";
 
@@ -9,16 +9,14 @@ export interface Props {
 
 const { site } = Astro.props;
 
-const widths = [450, 800];
 const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
 ---
 
 <div class="group aspect-video hover:!text-default">
   <figure class="relative h-full w-full overflow-hidden">
-    <Picture
+    <Image
       class="object-cover w-full h-full transition-all duration-300 bg-cover group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
       src={site.image}
-      widths={widths}
       sizes={sizes}
       alt={`A screenshot of ${site.title}`}
     />
