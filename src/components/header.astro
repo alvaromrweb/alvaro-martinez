@@ -68,7 +68,7 @@ const navItems: Array<NavItem> = [
               {
                 navItems.map(({ title, url, target, icon }) => (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url} target={target}>
+                    <a class="block py-3 text-center text-xl" href={url} target={target}>
                       {icon ? (<Icon class="h-10 mx-auto" name={icon} />) : ''}
                       {title ? title : ''}
                     </a>
