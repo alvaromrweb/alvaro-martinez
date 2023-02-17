@@ -1,8 +1,8 @@
 ---
 import { Image } from "@astrojs/image/components";
 import fotoCara from "~/assets/foto-cara.png";
-import { Icon } from "astro-icon";
 import ButtonGradient from "./ui/buttonGradient.astro";
+import ButtonBorderGradient from "./ui/buttonBorderGradient.astro";
 
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
@@ -23,10 +23,14 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       <p class="text-center xl:text-left  text-gray-200/75 text-sm font-bold">
          +7 años de experiencia en desarrollo y mantenimiento de aplicaciones web
       </p>
-      <div class="mt-4  text-center xl:text-left relative">
+      <div class="flex gap-5 justify-center xl:justify-start mt-4  text-center xl:text-left relative">
         <a href="#contacto">
           <ButtonGradient className="text-lg inset-x-0 sm:inset-x-auto">Contacto</ButtonGradient>
         </a>
+        <a href="/CV Álvaro Martínez.pdf" target="_blank">
+          <ButtonBorderGradient className="text-lg ">Currículum</ButtonBorderGradient>
+        </a>
+        <!-- <button class="text-lg text-white border-2 border-blue-500 rounded-full px-5 py-3">Currículum</button> -->
       </div>
     </div>
     <div
