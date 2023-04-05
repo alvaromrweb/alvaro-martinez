@@ -3,28 +3,28 @@ import ContentSection from "~/components/content-section.astro";
 import ButtonSend from "./ui/buttonSend.astro";
 ---
 
-<ContentSection title="Contacto" id="contacto">
+<ContentSection title="Contact" id="contacto">
   <Fragment slot="lead">
-    Ponte en contacto conmigo.
+    Get in touch with me
   </Fragment>
 
   <form class="space-y-6 md:space-y-8 w-full max-w-screen-md">
         <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Tu email</label>
-            <input type="email" id="email" class="shadow-sm   outline-none  text-sm rounded-lg  block w-full px-4 py-3 bg-gray-700  placeholder-gray-400 text-white  shadow-sm-light" placeholder="nombre@empresa.com" required>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-300">Email</label>
+            <input type="email" id="email" class="shadow-sm   outline-none  text-sm rounded-lg  block w-full px-4 py-3 bg-gray-700  placeholder-gray-400 text-white  shadow-sm-light" placeholder="name@company.com" required>
         </div>
         <div>
-            <label for="subject" class="block mb-2 text-sm font-medium  text-gray-300">Asunto</label>
-            <input type="text" id="subject" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg   shadow-sm  bg-gray-700  placeholder-gray-400 text-white shadow-sm-light" placeholder="Dime en qué te puedo ayudar" required>
+            <label for="subject" class="block mb-2 text-sm font-medium  text-gray-300">Subject</label>
+            <input type="text" id="subject" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg   shadow-sm  bg-gray-700  placeholder-gray-400 text-white shadow-sm-light" placeholder="How can I help you" required>
         </div>
         <div class="sm:col-span-2">
-            <label for="message" class="block mb-2 text-sm font-medium  text-gray-300">Tu mensaje</label>
-            <textarea id="message" rows="6" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg shadow-sm    bg-gray-700  placeholder-gray-400 text-white " placeholder="Explícame más en detalle" required></textarea>
+            <label for="message" class="block mb-2 text-sm font-medium  text-gray-300">Message</label>
+            <textarea id="message" rows="6" class="block px-4 py-3 w-full text-sm outline-none  rounded-lg shadow-sm    bg-gray-700  placeholder-gray-400 text-white " placeholder="Tell me more in detail" required></textarea>
         </div>
         <div id="response" class="transition-all">
             
         </div>
-        <ButtonSend className="flex justify-center w-full sm:w-auto sm:px-7">Enviar</ButtonSend>
+        <ButtonSend className="flex justify-center w-full sm:w-auto sm:px-7">Send</ButtonSend>
     </form>
   
 </ContentSection>

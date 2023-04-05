@@ -2,37 +2,37 @@
   {
     "title": "Metropoliscenter",
     "image": "./images/metropolis.jpg",
-    "description": "Ecommerce hecho a medida desde 0 con casuística especial para cartas y sus atributos + panel de administración y TPV",
+    "description": "Ecommerce made from scratch 0 with special features for trading cards and their attributes + administration panel and POS",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "MYIQOS",
     "image": "./images/iqos.png",
-    "description": "Aplicación frontend que se comunica con una API exterior para mostrar y modificar datos, incluyendo una tienda, perfil, integración con Instagram y demás",
+    "description": "Frontend application that communicates with an external API to display and modify data, including a store, profile, integration with Instagram and more",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery"]
   },
   {
     "title": "CRM GO2DO",
     "image": "./images/crmgo2do.png",
-    "description": "CRM de gestión de clientes, empresas, llamadas y campañas hecho a medida desde 0",
+    "description": "CRM for customer, companies, calls and campaigns management made from scratch",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "MDA Game",
     "image": "./images/mda.png",
-    "description": "Aplicación para un evento que consiste en responder a una serie de preguntas por grupos y luego mostrar las respuestas agrupadas en un backoffice",
+    "description": "Quiz application for a presential event answered by groups of people and then displaying the answers grouped in a backoffice with statistical graphs",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "Servixtt",
     "image": "./images/servixtt.jpg",
-    "description": "Prestashop con módulos hechos a medida para sincronizar stock con su almacén y hacer disponible su stock a otros clientes selectivamente mediante una API",
+    "description": "Prestashop with custom modules to synchronize stock with their warehouse and make their stock selectively available to other customers via an API",
     "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript",  "logos:mysql"]
   },
   {
     "title": "Bodegas Tradición",
     "image": "./images/bodegas.jpg",
-    "description": "Wordpress con un plugin de reservas modificado para que funcione según el cliente quiere",
+    "description": "Wordpress with a booking plugin modified to work according to the client's needs",
     "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"]
   }
   

@@ -25,18 +25,18 @@ export async function post({request}) {
         console.log(info)
         // console.log("Message sent: %s", info.messageId);
         // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-        return new Response(JSON.stringify({"status": "success", "message": "Mensaje enviado"}), {
+        return new Response(JSON.stringify({"status": "success", "message": "Message sent"}), {
           status: 200,
         });
         
       } catch (error) {
-        return new Response(JSON.stringify({"status": "fail", "message": `Error al enviar el correo: ${error.message}`}), {
+        return new Response(JSON.stringify({"status": "fail", "message": `Error sending the email: ${error.message}`}), {
           status: 400,
         });
       }
 
     } else {
-      return new Response(JSON.stringify({"status": "fail", "message": `Faltan campos por rellenar`}), {
+      return new Response(JSON.stringify({"status": "fail", "message": `Missing fields`}), {
         status: 400,
       });
     }
