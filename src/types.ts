@@ -33,5 +33,6 @@ export interface ShowcaseSite {
   title: string;
   image: ImageMetadata;
   description: string;
-  techIcons: ReadonlyArray<string>
+  techIcons: ReadonlyArray<string>;
+  link?: string;
 }

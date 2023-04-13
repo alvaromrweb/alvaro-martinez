@@ -27,13 +27,15 @@
     "title": "Servixtt",
     "image": "./images/servixtt.jpg",
     "description": "Prestashop with custom modules to synchronize stock with their warehouse and make their stock selectively available to other customers via an API",
-    "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript",  "logos:mysql"]
+    "techIcons": ["logos:prestashop", "technologies/php", "logos:javascript",  "logos:mysql"],
+    "link": "https://servixtt.com/"
   },
   {
     "title": "Bodegas Tradición",
     "image": "./images/bodegas.jpg",
     "description": "Wordpress with a booking plugin modified to work according to the client's needs",
-    "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"]
+    "techIcons": ["bi:wordpress", "technologies/php", "logos:javascript"],
+    "link": "https://bodegastradicion.es/"
   }
   
 ]
