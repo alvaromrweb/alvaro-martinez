@@ -7,19 +7,19 @@
   },
   {
     "title": "MYIQOS",
-    "image": "./images/iqos.png",
+    "image": "./images/iqos.jpg",
     "description": "Frontend application that communicates with an external API to display and modify data, including a store, profile, integration with Instagram and more",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery"]
   },
   {
     "title": "CRM GO2DO",
-    "image": "./images/crmgo2do.png",
+    "image": "./images/crmgo2do.jpg",
     "description": "CRM for customer, companies, calls and campaigns management made from scratch",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
   {
     "title": "MDA Game",
-    "image": "./images/mda.png",
+    "image": "./images/mda.jpg",
     "description": "Quiz application for a presential event answered by groups of people and then displaying the answers grouped in a backoffice with statistical graphs",
     "techIcons": ["technologies/php", "logos:javascript", "logos:bootstrap", "mdi:jquery", "logos:mysql"]
   },
